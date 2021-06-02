@@ -1,0 +1,15 @@
+{
+    "name": "crell/eliza",
+    "description": "The famous Eliza chatbot therapist.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Larry Garfield",
+            "email": "larry@garfieldtech.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    }
+}
