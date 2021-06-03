@@ -71,3 +71,4 @@ $string['resourcesearchevent'] = 'S\'ha cercat recurs';
 $string['fallbackevent'] = 'S\'ha realitzat una petició desconeguda';
 
 $string['writeamessage'] = 'Escriu un missatge...';
+$string['idonotunderstand'] = 'No entenc què dius';

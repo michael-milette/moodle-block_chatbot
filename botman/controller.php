@@ -67,7 +67,7 @@ DriverManager::loadDriver(\BotMan\Drivers\Web\WebDriver::class);
 $adapter = new FilesystemAdapter();
 $botman = BotManFactory::create($config, new SymfonyCache($adapter));
 
-//Welcome message 
+//Welcome message
 $botman->hears('welcome_message', function ($bot) {
 	$bot->reply(get_string('fullwelcome1', 'block_chatbot'));
 	$bot->reply(get_string('fullwelcome2', 'block_chatbot'));
@@ -86,21 +86,21 @@ $botman->fallback(function($bot) {
 	//Create log
 	global $PAGE;
 	$context = context::instance_by_id($_GET['context']);
-	if ($context->get_course_context(false) 
-			&& (is_viewing(context::instance_by_id($_GET['context'])) 
+	if ($context->get_course_context(false)
+			&& (is_viewing(context::instance_by_id($_GET['context']))
 			|| is_enrolled(context::instance_by_id($_GET['context'])))) {
 		$event = \block_chatbot\event\fallback_executed::create(array(
-			'context' => context::instance_by_id($_GET['context']), 
+			'context' => context::instance_by_id($_GET['context']),
 		));
 	} else {
 		$event = \block_chatbot\event\fallback_executed::create(array(
-			'context' => $PAGE->context, 
+			'context' => $PAGE->context,
 		));
 	}
 
 	$event->trigger();
 
-	$bot->reply('No entenc què dius');
+	$bot->reply(get_string('idonotunderstand', 'block_chatbot'));
 });
 
 // Start listening

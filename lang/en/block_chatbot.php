@@ -72,3 +72,4 @@ $string['resourcesearchevent'] = 'Resource search';
 $string['fallbackevent'] = 'Unknown request made';
 
 $string['writeamessage'] = 'Write a message...';
+$string['idonotunderstand'] = 'I don\'t understand what you\'re saying';
